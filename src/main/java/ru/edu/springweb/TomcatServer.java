@@ -14,7 +14,7 @@ public class TomcatServer {
         Tomcat tomcat = new Tomcat();
         tomcat.setPort(8080);
 
-        StandardContext context = (StandardContext) tomcat.addWebapp("", new File("src/main/resources").getAbsolutePath());
+        StandardContext context = (StandardContext) tomcat.addWebapp("", new File("src/main/webapp").getAbsolutePath());
 
         File webInfClasses = new File("target/classes");
         WebResourceRoot resources = new StandardRoot(context);
